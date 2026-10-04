@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cumbam Academy of Acupuncture — One-Touch Healing, Save the World Without Drugs</title>
+<meta name="description" content="Cumbam Academy of Acupuncture, Cumbum — classical acupuncture education and public awareness since 2004. Courses, books, videos and Acu Healers.">
+<meta name="theme-color" content="#071633">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cumbam Academy">
+<meta property="og:title" content="Cumbam Academy of Acupuncture">
+<meta property="og:description" content="One-touch healing. Save the world without drugs.">
+<meta property="og:image" content="asset/logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="asset/app-icon.png">
+<link rel="apple-touch-icon" href="asset/app-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="progress"></div>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.9V17h2V9zM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-2 5.5l7 4.5-7 4.5z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.8-.1 1.4z"/></symbol>
+</svg>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="inner">
+    <a class="brand" href="#/home" data-route="home">
+      <span class="logo imgbox"><img data-src="logo" alt="Cumbam Academy logo"></span>
+      <span>CUMBAM ACADEMY<small data-ta="அக்குபங்சர் அகாடமி">OF ACUPUNCTURE</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#/home" data-route="home" data-ta="முகப்பு">Home</a>
+      <a href="#/acupuncture" data-route="acupuncture" data-ta="அக்குபங்சர்">Acupuncture</a>
+      <a href="#/about" data-route="about" data-ta="எங்களைப் பற்றி">About</a>
+      <a href="#/healers" data-route="healers" data-ta="அக்கு ஹீலர்கள்">Acu Healers</a>
+      <a href="#/courses" data-route="courses" data-ta="படிப்புகள்">Courses</a>
+      <a href="#/books" data-route="books" data-ta="புத்தகங்கள்">Books</a>
+      <a href="#/videos" data-route="videos" data-ta="காணொளிகள்">Videos</a>
+      <a href="#/classes" data-route="classes" data-ta="2 &amp; 4 நாள் வகுப்பு">2 &amp; 4 Days Class</a>
+      <a href="#/articles" data-route="articles" data-ta="கட்டுரைகள்">Articles</a>
+      <a href="#/contact" data-route="contact" data-ta="தொடர்பு">Contact</a>
+    </nav>
+    <div class="top-actions">
+      <button class="pill" id="installBtn">⬇ Install</button>
+      <button class="pill" id="langBtn" aria-label="Change language">தமிழ்</button>
+    </div>
+  </div>
+</header>
+
+<!-- BOTTOM TABS (mobile) -->
+<nav class="tabbar" aria-label="App tabs">
+  <a href="#/home" data-route="home"><svg class="icon"><use href="#i-home"/></svg><span data-ta="முகப்பு">Home</span></a>
+  <a href="#/courses" data-route="courses"><svg class="icon"><use href="#i-cap"/></svg><span data-ta="படிப்புகள்">Courses</span></a>
+  <a href="#/videos" data-route="videos"><svg class="icon"><use href="#i-play"/></svg><span data-ta="காணொளி">Videos</span></a>
+  <a href="#/contact" data-route="contact"><svg class="icon"><use href="#i-phone"/></svg><span data-ta="தொடர்பு">Contact</span></a>
+  <button id="moreBtn" aria-label="More menu"><svg class="icon"><use href="#i-grid"/></svg><span data-ta="மேலும்">More</span></button>
+</nav>
+
+<!-- MORE SHEET -->
+<div class="scrim" id="scrim"></div>
+<div class="sheet" id="sheet" role="dialog" aria-label="Menu">
+  <div class="grab"></div>
+  <h3 data-ta="அனைத்து பகுதிகள்">Explore</h3>
+  <div class="sheet-grid">
+    <a href="#/home" data-route="home"><span class="emo">🏠</span><span data-ta="முகப்பு">Home</span></a>
+    <a href="#/acupuncture" data-route="acupuncture"><span class="emo">☯️</span><span data-ta="அக்குபங்சர்">Acupuncture</span></a>
+    <a href="#/about" data-route="about"><span class="emo">🏛️</span><span data-ta="எங்களைப் பற்றி">About</span></a>
+    <a href="#/healers" data-route="healers"><span class="emo">🤲</span><span data-ta="அக்கு ஹீலர்கள்">Acu Healers</span></a>
+    <a href="#/courses" data-route="courses"><span class="emo">🎓</span><span data-ta="படிப்புகள்">Courses</span></a>
+    <a href="#/books" data-route="books"><span class="emo">📚</span><span data-ta="புத்தகங்கள்">Books</span></a>
+    <a href="#/videos" data-route="videos"><span class="emo">▶️</span><span data-ta="காணொளிகள்">Videos</span></a>
+    <a href="#/classes" data-route="classes"><span class="emo">🗓️</span><span data-ta="2 &amp; 4 நாள் வகுப்பு">2 &amp; 4 Days Class</span></a>
+    <a href="#/articles" data-route="articles"><span class="emo">📰</span><span data-ta="மருத்துவக் கட்டுரைகள்">Medical Articles</span></a>
+    <a href="#/contact" data-route="contact"><span class="emo">📞</span><span data-ta="தொடர்பு">Contact</span></a>
+  </div>
+</div>
+
+<!-- FLOATING BUTTONS -->
+<div class="fabs">
+  <a class="fab wa" href="https://wa.me/919788223366?text=Hello%20Cumbam%20Academy" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+  <a class="fab call" href="tel:+919788223366" aria-label="Call"><svg><use href="#i-phone"/></svg></a>
+</div>
+
+<main>
+
+<!-- ================= HOME ================= -->
+<section class="page" id="page-home">
+  <div class="hero">
+    <div class="bg imgbox"><img data-src="new-home" alt="" loading="eager"></div>
+    <canvas id="particles"></canvas>
+    <div class="container drop-in">
+      <div class="touch" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <defs><radialGradient id="g1"><stop offset="0" stop-color="#fff"/><stop offset=".4" stop-color="#ffd77a"/><stop offset="1" stop-color="#e0b04a" stop-opacity="0"/></radialGradient></defs>
+          <circle class="ripple-c" cx="100" cy="100" r="90" fill="none" stroke="#ffd77a" stroke-width="2"/>
+          <circle class="ripple-c" cx="100" cy="100" r="90" fill="none" stroke="#ffd77a" stroke-width="2"/>
+          <circle class="ripple-c" cx="100" cy="100" r="90" fill="none" stroke="#ffd77a" stroke-width="2"/>
+          <g class="ring-spin"><circle cx="100" cy="100" r="70" fill="none" stroke="#e0b04a" stroke-width="1.5" stroke-dasharray="4 10"/></g>
+          <g class="ring-spin rev"><circle cx="100" cy="100" r="54" fill="none" stroke="#d62839" stroke-width="2" stroke-dasharray="30 14"/></g>
+          <circle class="core" cx="100" cy="100" r="30" fill="url(#g1)"/>
+          <circle cx="100" cy="100" r="5" fill="#fff"/>
+        </svg>
+      </div>
+      <h1><span data-ta="தொடு சிகிச்சை">One-Touch Healing</span></h1>
+      <p class="tag"><b data-ta="மருந்தில்லா உலகம் காப்போம்">Save the World Without Drugs</b></p>
+      <p class="sub" data-ta="2004 முதல் முறையான அக்குபங்சர் கல்வியையும் பொது விழிப்புணர்வையும் வழங்கி வரும் கம்பம் அகாடமி ஆஃப் அக்குபங்சர்.">Cumbam Academy of Acupuncture — classical acupuncture education and public awareness, since 2004.</p>
+      <div class="btn-row">
+        <a class="btn btn-gold pulse" href="https://www.cumbamacademy.com/contact" target="_blank" rel="noopener" data-ta="இப்போதே சேருங்கள்">Enroll Now</a>
+        <a class="btn btn-ghost" href="#/videos" data-ta="காணொளிகள் காண்க">▶ Watch Videos</a>
+      </div>
+    </div>
+    <div class="scroll-hint"></div>
+  </div>
+
+  <div class="section" style="padding-top:34px">
+    <div class="container stats">
+      <div class="stat reveal" style="--d:0"><div class="num"><span class="count" data-years="2004">0</span></div><div class="lbl" data-ta="ஆண்டுகள் சேவை">Years since 2004</div></div>
+      <div class="stat reveal" style="--d:1"><div class="num"><span class="count" data-to="30">0</span>+</div><div class="lbl" data-ta="வெளியிடப்பட்ட நூல்கள்">Books published</div></div>
+      <div class="stat reveal" style="--d:2"><div class="num"><span class="count" data-to="3">0</span></div><div class="lbl" data-ta="பல்கலைக்கழகத் தொடர்புகள்">University links</div></div>
+      <div class="stat reveal" style="--d:3"><div class="num" style="font-size:1.5rem;padding-top:8px">All&nbsp;India</div><div class="lbl" data-ta="இந்தியா முழுவதும் மாணவர்கள்">Students practising</div></div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:10px">
+    <div class="container">
+      <h2 class="h2 reveal" data-ta="விரைவு அணுகல்">Explore</h2>
+      <div class="qgrid">
+        <a class="qcard reveal" style="--d:0" href="#/acupuncture"><span class="emo">☯️</span><div><b data-ta="அக்குபங்சர்">Acupuncture</b><small data-ta="ஒரு தொடு சிகிச்சை அறிவியல்">The science of touch</small></div></a>
+        <a class="qcard reveal" style="--d:1" href="#/courses"><span class="emo">🎓</span><div><b data-ta="படிப்புகள்">Courses</b><small data-ta="பாடத்திட்டம் &amp; சேர்க்கை">Syllabus &amp; admission</small></div></a>
+        <a class="qcard reveal" style="--d:2" href="#/books"><span class="emo">📚</span><div><b data-ta="புத்தகங்கள்">Books</b><small data-ta="புத்துயிர் பதிப்பகம்">Puthuyir Pathippagam</small></div></a>
+        <a class="qcard reveal" style="--d:3" href="#/videos"><span class="emo">▶️</span><div><b data-ta="காணொளிகள்">Videos</b><small data-ta="YouTube பட்டியல்கள்">YouTube playlists</small></div></a>
+        <a class="qcard reveal" style="--d:0" href="#/healers"><span class="emo">🤲</span><div><b data-ta="அக்கு ஹீலர்கள்">Acu Healers</b><small data-ta="அக்கு ஹோம்ஸ் செயலி">Acu Homes app</small></div></a>
+        <a class="qcard reveal" style="--d:1" href="#/classes"><span class="emo">🗓️</span><div><b data-ta="2 &amp; 4 நாள் வகுப்பு">2 &amp; 4 Days Class</b><small data-ta="அனைவருக்கும் அறிமுகம்">Open to everyone</small></div></a>
+        <a class="qcard reveal" style="--d:2" href="#/articles"><span class="emo">📰</span><div><b data-ta="கட்டுரைகள்">Medical Articles</b><small data-ta="படிக்க &amp; அறிய">Read &amp; learn</small></div></a>
+        <a class="qcard reveal" style="--d:3" href="#/contact"><span class="emo">📞</span><div><b data-ta="தொடர்பு">Contact</b><small data-ta="அழைக்க / வாட்ஸ்அப்">Call / WhatsApp</small></div></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:20px">
+    <div class="container news">
+      <div class="imgbox reveal zoomable" data-label="Add asset/latest-news.jpg"><img data-src="latest-news" alt="Latest news poster" loading="lazy"></div>
+      <div class="reveal">
+        <span class="eyebrow" data-ta="புதிய அறிவிப்பு">Latest News</span>
+        <h2 class="h2" style="margin-top:6px" data-ta="சமீபத்திய அறிவிப்பு">Latest Announcement</h2>
+        <p class="muted" data-ta="அக்கு ஹீலர்கள் (இந்தியா) நிகழ்வுகள் மற்றும் கூட்டங்களின் சமீபத்திய அறிவிப்பு. முழுமையாகப் பார்க்க படத்தைத் தொடவும்.">Latest announcement for Acu Healers (India) events and meetings. Tap the poster to view it in full size.</p>
+        <div class="btn-row"><a class="btn btn-ghost" href="#/contact" data-ta="விவரங்களுக்கு அழைக்க">Call for details</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:20px">
+    <div class="container split">
+      <div class="imgbox reveal" data-label="Add asset/academy-photo.avif"><img data-src="academy-photo" alt="Cumbam Academy" loading="lazy"></div>
+      <div class="reveal">
+        <span class="eyebrow" data-ta="எங்களைப் பற்றி">About us</span>
+        <h2 class="h2" style="margin-top:6px" data-ta="முறையான அக்குபங்சர், கலப்பின்றி">Proper acupuncture, un-mixed</h2>
+        <p class="muted" data-ta="2004-ல் அக்குபங்சர் ஹீலர்களால் துவங்கப்பட்ட கம்பம் அகாடமி, பிற மருத்துவ முறைகளின் கலப்பின்றி அக்குபங்சரைக் கற்பிக்கிறது. இங்கு பயின்ற மாணவர்கள் இந்தியா முழுவதும் சேவை செய்து வருகின்றனர்.">Started in 2004 by the Acupuncture Healers, Cumbam Academy teaches acupuncture without mixing any other medicine system. Its students serve people across India.</p>
+        <div class="btn-row"><a class="btn btn-gold" href="#/about" data-ta="மேலும் அறிய">Read more</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:20px">
+    <div class="container">
+      <h2 class="h2 reveal" data-ta="எங்கள் சமூகம்">Our Community</h2>
+      <div class="carousel reveal">
+        <div class="track" id="track">
+          <div class="slide imgbox" data-label="asset/testimonial-1"><img data-src="testimonial-1" alt="Community awareness session" loading="lazy"><div class="cap">Awareness session with the community</div></div>
+          <div class="slide imgbox" data-label="asset/testimonial-2"><img data-src="testimonial-2" alt="Community gathering" loading="lazy"><div class="cap">Community gathering</div></div>
+          <div class="slide imgbox" data-label="asset/testimonial-3"><img data-src="testimonial-3" alt="Group session" loading="lazy"><div class="cap">Group session</div></div>
+          <div class="slide imgbox" data-label="asset/testimonial-4"><img data-src="testimonial-4" alt="Team meeting" loading="lazy"><div class="cap">Team &amp; training meeting</div></div>
+          <div class="slide imgbox" data-label="asset/testimonial-5"><img data-src="testimonial-5" alt="School awareness" loading="lazy"><div class="cap">School awareness programme</div></div>
+        </div>
+        <div class="dots" id="dots"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:20px">
+    <div class="container">
+      <div class="banner reveal">
+        <div class="appicon imgbox"><img data-src="app-icon" alt="Acu Homes app"></div>
+        <div>
+          <h3 data-ta="அக்கு ஹோம்ஸ் செயலி">Get the Acu Homes app</h3>
+          <p style="opacity:.9;font-size:.92rem" data-ta="அக்கு ஹீலர்கள் தளம் &amp; செயலி — Google Play-ல் கிடைக்கும்.">The Acu Healers platform and app — available on Google Play.</p>
+        </div>
+        <a class="btn btn-gold" href="https://play.google.com/store/apps/details?id=net.acuhomes.acuhomes" target="_blank" rel="noopener">▶ Google Play</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ACUPUNCTURE ================= -->
+<section class="page" id="page-acupuncture">
+  <div class="container page-head">
+    <span class="eyebrow">Acupuncture</span>
+    <h1 data-ta="அக்குபங்சர் — ஒரு தொடு சிகிச்சை அறிவியல்">Acupuncture — the science of touch</h1>
+    <p data-ta="கம்பம் அகாடமி முறையான (கிளாசிக்கல்) அக்குபங்சரை கற்பிக்கிறது.">Cumbam Academy teaches classical acupuncture — taught on its own, with no mixing of other medicine systems.</p>
+  </div>
+  <div class="section" style="padding-top:20px">
+    <div class="container mer-wrap">
+      <div>
+        <div class="mer reveal" id="mer">
+          <svg viewBox="0 0 200 420" aria-label="Illustrative meridian diagram">
+            <circle class="body" cx="100" cy="40" r="22"/>
+            <path class="body" d="M88 62 L88 74 C70 78 52 84 46 100 L36 180 L48 184 L60 120 L66 200 L70 300 L72 395 L92 395 L98 250 L102 250 L108 395 L128 395 L130 300 L134 200 L140 120 L152 184 L164 180 L154 100 C148 84 130 78 112 74 L112 62 Z"/>
+            <path class="mline" d="M100 62 L100 250"/>
+            <path class="mline" d="M50 100 C46 130 44 160 40 182"/>
+            <path class="mline" d="M150 100 C154 130 156 160 160 182"/>
+            <path class="mline" d="M84 250 C80 300 80 350 80 392"/>
+            <path class="mline" d="M116 250 C120 300 120 350 120 392"/>
+            <g class="pts">
+              <circle class="pt-halo" cx="100" cy="18" r="6"/><circle class="pt" data-n="GV20" data-d="Top of the head — on the midline." cx="100" cy="18" r="5.5"/>
+              <circle class="pt-halo" cx="46" cy="140" r="6" style="animation-delay:.4s"/><circle class="pt" data-n="PC6" data-d="Inner forearm — a few finger-widths above the wrist crease." cx="46" cy="140" r="5.5"/>
+              <circle class="pt-halo" cx="41" cy="178" r="6" style="animation-delay:.8s"/><circle class="pt" data-n="LI4" data-d="Hand — on the back of the hand, between thumb and index finger." cx="41" cy="178" r="5.5"/>
+              <circle class="pt-halo" cx="80" cy="310" r="6" style="animation-delay:1.2s"/><circle class="pt" data-n="ST36" data-d="Lower leg — just below the knee, on the outer side of the shin." cx="80" cy="310" r="5.5"/>
+              <circle class="pt-halo" cx="80" cy="386" r="6" style="animation-delay:1.6s"/><circle class="pt" data-n="LV3" data-d="Top of the foot — between the big toe and second toe." cx="80" cy="386" r="5.5"/>
+            </g>
+          </svg>
+        </div>
+        <div id="ptInfo" class="card muted center" style="padding:14px"><span>👆 Tap a glowing point</span></div>
+      </div>
+      <div class="reveal">
+        <ul class="list">
+          <li><b>Classical &amp; un-mixed.</b> Acupuncture is taught as a complete system, guided by the Indian Acupuncture Syllabus committee.</li>
+          <li><b>One-touch philosophy.</b> The academy promotes simple, touch-based care and public health awareness.</li>
+          <li><b>Drug-free message.</b> “Save the World Without Drugs” is the heart of the Acu Healers awareness movement.</li>
+          <li><b>Learn by doing.</b> Courses combine classes, observation notes and book reading.</li>
+        </ul>
+        <div class="notice" style="margin-top:20px">Illustrative diagram for education only. It is not medical advice. Please consult a qualified practitioner for any health concern.</div>
+        <div class="btn-row"><a class="btn btn-gold" href="#/courses">Explore courses</a><a class="btn btn-ghost" href="#/videos">Watch &amp; learn</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="page" id="page-about">
+  <div class="container page-head">
+    <span class="eyebrow">About</span>
+    <h1>CUMBAM ACADEMY OF ACUPUNCTURE</h1>
+  </div>
+  <div class="section" style="padding-top:20px">
+    <div class="container split">
+      <div class="reveal">
+        <p style="margin-bottom:14px">In 2004, Cumbam Academy of Acupuncture was started by the Acupuncture Healers with the aim of teaching proper Acupuncture. Acupuncture training is given to the students with the syllabus guided by the Indian Acupuncture Syllabus committee.</p>
+        <p style="margin-bottom:14px">Cumbam Academy teaches Acupuncture uniquely without the mixing of any other medicine systems. Students who studied in Cumbam Academy serving people outstandingly by practicing Acupuncture all over India.</p>
+        <p>Cumbam Academy conducting Certificate / Diploma courses in Acupuncture. Cumbam Academy affiliated with Government universities like Tamil University and Tamilnadu Open University. Cumbam Academy is the First part time college in India recognised by Alagappa University.</p>
+      </div>
+      <div class="imgbox reveal" data-label="Add asset/students-group.avif"><img data-src="students-group" alt="Students group photo" loading="lazy"></div>
+    </div>
+    <div class="container" style="margin-top:34px">
+      <div class="card ta-text reveal">
+        <p style="margin-bottom:12px">முறையான அக்குபங்சரைப் பயிற்றுவிப்பதற்காக கம்பம் அகாடமி ஆஃப் அக்குபங்சர் 2004 ஆம் ஆண்டு அக்குபங்சர் ஹீலர்களால் துவங்கப்பட்டது. இந்திய அக்குபங்சர் பாடத்திட்டக்குழுவின் வழிகாட்டுதலில் தயாரிக்கப்பட்ட அக்குபங்சர் பாடத்திட்டத்தில் கம்பம் அகாடமி மாணவர்கள் பயிற்றுவிக்கப் படுகிறார்கள்.</p>
+        <p style="margin-bottom:12px">முறையான அக்குபங்சரை பிற மருத்துவ முறைகளின் கலப்பின்றி முழுமையாகக் கற்பிக்கிறது கம்பம் அகாடமி. இங்கு பயிற்சி பெற்ற மாணவர்கள் இந்தியா முழுவதும் அக்குபங்சர் சிகிச்சையளித்து வருகின்றனர்.</p>
+        <p>கம்பம் அகாடமி அக்குபங்சரில் சான்றிதழ், பட்டயப் பயிற்சிகளை நடத்தி வருகிறது. தமிழ்ப் பல்கலைக்கழகம் மற்றும் தமிழ்நாடு திறந்தநிலைப் பல்கலைக்கழகம் போன்ற அரசுப் பல்கலைக்கழகங்களுடன் இணைப்பு பெற்றுள்ளது. கம்பம் அகாடமி அழகப்பா பல்கலைக்கழகத்தின் அங்கீகாரம் பெற்று துவங்கப்பட்டுள்ள இந்தியாவின் முதல் அக்குபங்சர் பகுதி நேரக் கல்லூரி ஆகும்.</p>
+      </div>
+    </div>
+    <div class="container" style="margin-top:40px">
+      <h2 class="h2 reveal">Milestones</h2>
+      <div class="timeline reveal">
+        <div class="it"><b class="gold">2004</b><br>Cumbam Academy of Acupuncture started by the Acupuncture Healers.</div>
+        <div class="it"><b class="gold">Government university links</b><br>Affiliated with Tamil University and Tamilnadu Open University.</div>
+        <div class="it"><b class="gold">Alagappa University recognition</b><br>First part-time acupuncture college in India recognised by Alagappa University.</div>
+        <div class="it"><b class="gold">Today</b><br>Students practise acupuncture all over India; Acu Healers spread public awareness.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ACU HEALERS ================= -->
+<section class="page" id="page-healers">
+  <div class="container page-head">
+    <span class="eyebrow">Acu Healers</span>
+    <h1 data-ta="அக்கு ஹீலர்கள்">Acu Healers</h1>
+    <p>The public awareness movement behind “One-touch healing — Save the World Without Drugs”, led by Acu Healer Umar Farook and team.</p>
+  </div>
+  <div class="section" style="padding-top:20px">
+    <div class="container cards c3">
+      <div class="card reveal" style="--d:0"><h3>🌐 Acu Homes website</h3><p class="muted">Explore the Acu Healers platform.</p><div class="btn-row"><a class="btn btn-gold" href="https://www.acuhomes.net/" target="_blank" rel="noopener">Open acuhomes.net</a></div></div>
+      <div class="card reveal" style="--d:1"><h3>📱 Acu Homes app</h3><p class="muted">Install the app from Google Play.</p><div class="btn-row"><a class="btn btn-gold" href="https://play.google.com/store/apps/details?id=net.acuhomes.acuhomes" target="_blank" rel="noopener">Google Play</a></div></div>
+      <div class="card reveal" style="--d:2"><h3>▶️ YouTube</h3><p class="muted">Awareness talks and playlists.</p><div class="btn-row"><a class="btn btn-gold" href="https://www.youtube.com/@ACUHEALERS/playlists" target="_blank" rel="noopener">@ACUHEALERS</a></div></div>
+    </div>
+    <div class="container" style="margin-top:30px">
+      <div class="banner reveal" style="background:linear-gradient(120deg,var(--navy3),var(--navy2))">
+        <div class="appicon imgbox"><img data-src="app-icon" alt=""></div>
+        <div><h3>Everyone is welcome</h3><p style="opacity:.9;font-size:.92rem">Whatever your age, background or experience — you can learn, ask questions and join the awareness programmes.</p></div>
+        <a class="btn btn-gold" href="#/contact">Join us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COURSES ================= -->
+<section class="page" id="page-courses">
+  <div class="container page-head">
+    <span class="eyebrow">Courses</span>
+    <h1 data-ta="படிப்புகள்">Courses</h1>
+    <p>Run under the supervision of acupuncture masters. Courses combine three methods: Classes, Observation Note and Book Reading.</p>
+  </div>
+  <div class="section" style="padding-top:20px">
+    <div class="container">
+      <div class="card reveal" style="margin-bottom:18px">
+        <span class="badge">Faculty</span>
+        <p style="margin-top:10px">The masters mentoring at Cumbam Academy training centres are qualified on the government-prescribed basis, as per UGC norms. Most hold a university-recognised postgraduate degree in Acupuncture and have years of hands-on practice. The masters have written and published more than thirty books on this traditional science.</p>
+      </div>
+      <details class="acc reveal" open>
+        <summary>One Year Acupuncture Course</summary>
+        <div class="body-in">
+          <p class="muted">Syllabus papers</p>
+          <div class="papers">
+            <div><b>Theory 1</b> Basic Anatomy &amp; Acupuncture physiology</div>
+            <div><b>Theory 2</b> Introduction to History and Philosophies of Acupuncture</div>
+            <div><b>Theory 3</b> Applied Acupuncture – 1</div>
+            <div><b>Practical 1</b> Location of Acupuncture meridians</div>
+            <div><b>Practical 2</b> Location of Acupuncture points</div>
+            <div><b>Advanced</b> Advanced Physiology of Acupuncture · Applied Acupuncture – 2</div>
+            <div><b>Practical</b> Acupuncture Diagnosis Methods · Acupuncture Treatment Methods</div>
+          </div>
+        </div>
+      </details>
+      <div class="btn-row reveal">
+        <a class="btn btn-gold pulse" href="https://www.cumbamacademy.com/contact" target="_blank" rel="noopener" data-ta="சேர்க்கைக்கு விண்ணப்பிக்க">Enroll / Enquire</a>
+        <a class="btn btn-ghost" href="https://www.cumbamacademy.com/_files/ugd/76a4d3_82a29e59a21d48e5b925959c39b08a36.pdf" target="_blank" rel="noopener">📄 2026 Admission Prospectus</a>
+        <a class="btn btn-ghost" href="https://www.cumbamacademy.com/_files/ugd/76a4d3_8872502e7ab648d08ce3b81123082c8b.pdf" target="_blank" rel="noopener">⬇ Download</a>
+      </div>
+      <div class="notice reveal" style="margin-top:22px">For the latest fees, batches and eligibility please check the prospectus or contact the academy.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BOOKS ================= -->
+<section class="page" id="page-books">
+  <div class="container page-head">
+    <span class="eyebrow">Books</span>
+    <h1 data-ta="புத்தகங்கள்">Books</h1>
+    <p>Publications of Puthuyir Pathippagam (புத்துயிர் பதிப்பகம்) — mainly by Acu Healer A. Umar Farook &amp; team. Prices in ₹.</p>
+  </div>
+  <div class="section" style="padding-top:20px">
+    <div class="container">
+      <input class="search" id="bookSearch" type="search" placeholder="🔍 Search books / புத்தகம் தேடுக…">
+      <div class="booklist" id="bookList"></div>
+      <div class="card reveal" style="margin-top:22px">
+        <h3>📦 Order</h3>
+        <p class="muted">Puthuyir Pathippagam, Shop No. 14, Bus Stand, Cumbum – 625516, Theni District.<br>Phone: <a class="gold" href="tel:+919788223366">97882 23366</a> | <a class="gold" href="tel:+919786336611">97863 36611</a> · www.acuhome.org</p>
+        <div class="btn-row"><a class="btn btn-gold" href="https://wa.me/919788223366?text=I%20would%20like%20to%20order%20books" target="_blank" rel="noopener">Order on WhatsApp</a></div>
+      </div>
+      <h2 class="h2" style="margin-top:34px">Full price list (books, CDs, DVDs)</h2>
+      <div class="imgbox zoomable reveal" style="border-radius:16px"><img src="asset/book-pricelist.png" alt="Puthuyir Pathippagam full price list" loading="lazy" style="height:auto"></div>
+      <p class="muted" style="margin-top:8px;font-size:.85rem">Tap the image to zoom.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIDEOS ================= -->
+<section class="page" id="page-videos">
+  <div class="container page-head">
+    <span class="eyebrow">Videos</span>
+    <h1 data-ta="காணொளிகள்">Videos</h1>
+    <p>Talks, classes and awareness programmes on YouTube.</p>
+  </div>
+  <div class="section" style="padding-top:20px">
+    <div class="container">
+      <div class="btn-row" style="margin:0 0 20px">
+        <a class="btn btn-red" href="https://www.youtube.com/@ACUHEALERS/playlists" target="_blank" rel="noopener">▶ @ACUHEALERS</a>
+        <a class="btn btn-ghost" href="https://www.youtube.com/@acuhub-umar/videos" target="_blank" rel="noopener">@acuhub-umar</a>
+        <a class="btn btn-ghost" href="https://www.youtube.com/@aranumar" target="_blank" rel="noopener">@aranumar</a>
+      </div>
+      <div class="tabs" id="vtabs">
+        <button class="on" data-t="videos">Featured videos</button>
+        <button data-t="lists">Playlists</button>
+      </div>
+      <div class="vgrid" id="vgrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 & 4 DAYS CLASS ================= -->
+<section class="page" id="page-classes">
+  <div class="container page-head">
+    <span class="eyebrow">Short classes</span>
+    <h1 data-ta="2 &amp; 4 நாள் வகுப்பு">2 Days &amp; 4 Days Class</h1>
+    <p>Short introductory classes for anyone who wants to learn about acupuncture and healthy living.</p>
+  </div>
+  <div class="section" style="padding-top:20px">
+    <div class="container cards c2">
+      <div class="card reveal"><span class="badge">2 Days</span><h3 style="margin-top:10px">Introduction class</h3><p class="muted">A quick, friendly start for beginners and families. Dates, venue and fee: please contact the academy.</p></div>
+      <div class="card reveal" style="--d:1"><span class="badge">4 Days</span><h3 style="margin-top:10px">Extended class</h3><p class="muted">A deeper hands-on programme. Dates, venue and fee: please contact the academy.</p></div>
+    </div>
+    <div class="container">
+      <div class="btn-row">
+        <a class="btn btn-gold pulse" href="https://www.cumbamacademy.com/two-days-class" target="_blank" rel="noopener">See class details</a>
+        <a class="btn btn-ghost" href="#/contact">Ask about the next batch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ARTICLES ================= -->
+<section class="page" id="page-articles">
+  <div class="container page-head">
+    <span class="eyebrow">Articles</span>
+    <h1 data-ta="மருத்துவக் கட்டுரைகள்">Medical Articles</h1>
+    <p>Awareness articles on health, food, mind and medicine.</p>
+  </div>
+  <div class="section" style="padding-top:20px">
+    <div class="container">
+      <div class="card reveal">
+        <h3>📰 Read on cumbamacademy.com</h3>
+        <p class="muted">Our articles are published on the academy blog.</p>
+        <div class="btn-row"><a class="btn btn-gold" href="https://www.cumbamacademy.com/blog" target="_blank" rel="noopener">Open articles</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="page" id="page-contact">
+  <div class="container page-head">
+    <span class="eyebrow">Contact</span>
+    <h1 data-ta="தொடர்பு கொள்ள">Get in touch</h1>
+    <p>Call, WhatsApp or send an enquiry — everyone is welcome.</p>
+  </div>
+  <div class="section" style="padding-top:20px">
+    <div class="container contact-grid">
+      <div class="card reveal">
+        <div class="crow"><div class="ci">📞</div><div><b>Phone / WhatsApp</b><br><a class="gold" href="tel:+919788223366">97882 23366</a> · <a class="gold" href="tel:+919786336611">97863 36611</a></div></div>
+        <hr style="border:0;border-top:1px solid var(--line);margin:16px 0">
+        <div class="crow"><div class="ci">📍</div><div><b>Cumbum</b><br>514, L.F. Road, Cumbum, Tamil Nadu – 625516</div></div>
+        <hr style="border:0;border-top:1px solid var(--line);margin:16px 0">
+        <div class="crow"><div class="ci">📍</div><div><b>Coimbatore</b><br>Behind Hotel Amuthas, Podanur Main Road, Podanur, Coimbatore – 641023</div></div>
+        <hr style="border:0;border-top:1px solid var(--line);margin:16px 0">
+        <div class="crow"><div class="ci">🌐</div><div><b>Websites</b><br><a class="gold" href="https://www.cumbamacademy.com/" target="_blank" rel="noopener">cumbamacademy.com</a> · <a class="gold" href="https://www.acuhomes.net/" target="_blank" rel="noopener">acuhomes.net</a></div></div>
+        <div class="btn-row">
+          <a class="btn btn-gold" href="tel:+919788223366">📞 Call</a>
+          <a class="btn btn-ghost" href="https://wa.me/919788223366" target="_blank" rel="noopener">💬 WhatsApp</a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Cumbam+Academy+of+Acupuncture+Cumbum" target="_blank" rel="noopener">🗺 Map</a>
+        </div>
+      </div>
+      <div class="card reveal" style="--d:1">
+        <h3 style="margin-bottom:12px">Send an enquiry</h3>
+        <form id="enqForm">
+          <input name="name" placeholder="Your name" required>
+          <input name="phone" type="tel" placeholder="Phone number" required>
+          <select name="topic"><option>Course enquiry</option><option>2 &amp; 4 Days class</option><option>Books order</option><option>Acu Healers / awareness</option><option>Other</option></select>
+          <textarea name="msg" rows="3" placeholder="Your message"></textarea>
+          <button class="btn btn-gold" type="submit">Send via WhatsApp</button>
+        </form>
+        <div class="success" id="success">
+          <svg class="check" viewBox="0 0 80 80"><circle cx="40" cy="40" r="37"/><path d="M24 41 l11 11 22-24"/></svg>
+          <b>Thank you!</b><p class="muted">WhatsApp opened with your message. Please press send.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <b class="gold">CUMBAM ACADEMY OF ACUPUNCTURE</b>
+    <div class="links">
+      <a href="#/home">Home</a><a href="#/about">About</a><a href="#/courses">Courses</a><a href="#/books">Books</a><a href="#/videos">Videos</a><a href="#/contact">Contact</a>
+    </div>
+    <p>One-touch healing · Save the World Without Drugs</p>
+    <p style="margin-top:6px">© <span id="yr">2026</span> Cumbam Academy. Educational content — not a substitute for medical advice.</p>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <button class="x" id="modalX" aria-label="Close">✕</button>
+  <div class="box" id="modalBox"></div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
